@@ -17,9 +17,19 @@
 		// Get the output element
 		var output = document.getElementById("output");
 
+		// Check if there's saved data in localStorage
+		if (localStorage.getItem("inputData")) {
+			// If there is, set the input field value and output text to the saved data
+			input.value = localStorage.getItem("inputData");
+			output.innerHTML = localStorage.getItem("inputData");
+		}
+
 		// Add an event listener to the input field that updates the output element
 		input.addEventListener("input", function(event) {
 			output.innerHTML = event.target.value;
+
+			// Save the input data to localStorage
+			localStorage.setItem("inputData", event.target.value);
 		});
 	</script>
 </body>
