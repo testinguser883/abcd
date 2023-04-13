@@ -1,5 +1,26 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    <h1>Hello World</h1>
-  </body>
+<head>
+	<title>Input Field Example</title>
+</head>
+<body>
+	<h1>Input Field Example</h1>
+	<p>Type anything you want into the input field below:</p>
+	<input type="text" id="myInput">
+	<p>The text you typed is:</p>
+	<p id="output"></p>
+
+	<script>
+		// Get the input field
+		var input = document.getElementById("myInput");
+
+		// Get the output element
+		var output = document.getElementById("output");
+
+		// Add an event listener to the input field that updates the output element
+		input.addEventListener("input", function(event) {
+			output.innerHTML = event.target.value;
+		});
+	</script>
+</body>
 </html>
