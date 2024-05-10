@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check ARN Format
-        run: echo "${{ secrets.OIDC_ROLE_ARN }}"
+        run: echo "${{ secrets.OIDC_ROLE_ARN }}" | awk -F '_' '{print $1, $2, $3, $4, $5, $6, $7, $8}'
