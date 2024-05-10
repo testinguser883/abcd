@@ -32,6 +32,6 @@ jobs:
       - name: List Compute Networks
         run: |-
           echo "Displaying networks"
-          gcloud compute networks list
+          gcloud info
           echo "Displaying subnets for my-awesome-vpc-network network"
-          gcloud compute networks subnets list --network my-awesome-vpc-network
+          gcloud auth list
