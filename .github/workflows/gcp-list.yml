@@ -21,7 +21,7 @@ jobs:
           workload_identity_provider: "projects/285106592795/locations/global/workloadIdentityPools/my-pool/providers/my-provider"
           create_credentials_file: true
           service_account: "id-021@probable-anchor-420008.iam.gserviceaccount.com"
-          # token_format: "access_token"
+          token_format: "access_token"
           # access_token_lifetime: "120s"
       - name: Echo stuff
         run: printenv
