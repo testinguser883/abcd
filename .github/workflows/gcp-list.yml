@@ -18,9 +18,9 @@ jobs:
         uses: google-github-actions/auth@v1
         with:
           # Value from command: gcloud iam workload-identity-pools providers describe github-actions --workload-identity-pool="github-actions-pool" --location="global"
-          workload_identity_provider: "projects/285106592795/locations/global/workloadIdentityPools/no-access-token/providers/github"
+          workload_identity_provider: "projects/285106592795/locations/global/workloadIdentityPools/terraform-example-pool/providers/terraform-github"
           create_credentials_file: true
-          service_account: "no-access-token@probable-anchor-420008.iam.gserviceaccount.com"
+          service_account: "my-service-account@probable-anchor-420008.iam.gserviceaccount.com"
           # token_format: "access_token"
           # access_token_lifetime: "120s"
       - name: Echo stuff
